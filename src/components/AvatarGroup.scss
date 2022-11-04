@@ -1,0 +1,84 @@
+$xsSize: 50px;
+$smSize: 100px;
+$mdSize: 150px;
+$lgSize: 200px; 
+
+.avatarContainer{
+  display: flex;
+}
+
+.avatarImage{
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white;
+  background: #fff;
+}
+
+.avatarImage:not(:first-child){
+  margin-left: -50px;
+}
+
+.avatarImage img{
+  height: inherit;
+}
+
+.avatarText{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eeeeee;
+}
+
+/*sizing*/
+.xs{
+  .avatarImage {
+    width: $xsSize;
+    height: $xsSize;
+  }
+  .avatarImage:not(:first-child){
+    margin-left: calc($xsSize / 4 * -1);
+  }
+  .avatarText{
+    font-size: 25px;
+  }
+}
+
+.sm{
+  .avatarImage {
+    width: $smSize;
+    height: $smSize;
+  }
+  .avatarImage:not(:first-child){
+    margin-left: calc($smSize / 4 * -1);
+  }
+  .avatarText{
+    font-size: 45px;
+  }
+}
+
+.md{
+  .avatarImage {
+    width: $mdSize;
+    height: $mdSize;
+  }
+  .avatarImage:not(:first-child){
+    margin-left: calc($mdSize / 4 * -1);
+  }
+  .avatarText{
+    font-size: 65px;
+  }
+}
+
+.lg{
+  .avatarImage {
+    width: $lgSize;
+    height: $lgSize;
+  }
+  .avatarImage:not(:first-child){
+    margin-left: calc($lgSize / 4 * -1);
+  }
+  .avatarText{
+    font-size: 75px;
+  }
+}
