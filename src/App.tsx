@@ -1,6 +1,7 @@
 import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import AvatarGroup, { Size, UserProp } from './components/AvatarGroup';
+import ToDo from './ToDo';
 // fake data
 import images from './assets/data.json';
 
@@ -17,6 +18,7 @@ function App() {
         maxLength={maxLength}
         size={size}
       />
+      <ToDo />
     </div>
   );
 }
