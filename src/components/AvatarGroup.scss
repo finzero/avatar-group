@@ -14,20 +14,17 @@ $lgSize: 200px;
   background: #fff;
 }
 
-.avatarImage:not(:first-child){
-  margin-left: -50px;
-}
-
 .avatarImage img{
   height: inherit;
 }
 
-.avatarText{
+.avatarText, .overlimitCount{
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #eeeeee;
+  background: #e8eaf5;
+  color: #787b8a;
 }
 
 /*sizing*/
@@ -37,9 +34,9 @@ $lgSize: 200px;
     height: $xsSize;
   }
   .avatarImage:not(:first-child){
-    margin-left: calc($xsSize / 4 * -1);
+    margin-left: calc($xsSize / 3 * -1);
   }
-  .avatarText{
+  .avatarText, .overlimitCount{
     font-size: 25px;
   }
 }
@@ -50,10 +47,10 @@ $lgSize: 200px;
     height: $smSize;
   }
   .avatarImage:not(:first-child){
-    margin-left: calc($smSize / 4 * -1);
+    margin-left: calc($smSize / 3 * -1);
   }
-  .avatarText{
-    font-size: 45px;
+  .avatarText, .overlimitCount{
+    font-size: 40px;
   }
 }
 
@@ -63,10 +60,10 @@ $lgSize: 200px;
     height: $mdSize;
   }
   .avatarImage:not(:first-child){
-    margin-left: calc($mdSize / 4 * -1);
+    margin-left: calc($mdSize / 3 * -1);
   }
-  .avatarText{
-    font-size: 65px;
+  .avatarText, .overlimitCount{
+    font-size: 50px;
   }
 }
 
@@ -76,9 +73,9 @@ $lgSize: 200px;
     height: $lgSize;
   }
   .avatarImage:not(:first-child){
-    margin-left: calc($lgSize / 4 * -1);
+    margin-left: calc($lgSize / 3 * -1);
   }
-  .avatarText{
-    font-size: 75px;
+  .avatarText, .overlimitCount{
+    font-size: 60px;
   }
 }

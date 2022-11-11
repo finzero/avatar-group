@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './AvatarGroup.scss';
 
-type Size = 'xs' | 'sm' | 'md' | 'lg';
+export type Size = 'xs' | 'sm' | 'md' | 'lg';
 
 export interface UserProp {
   image: string;
   name: string;
 }
 
-export interface AvatarGroupProp {
+interface AvatarGroupProp {
   maxLength: number;
   size: Size;
   users: UserProp[];
@@ -19,43 +19,43 @@ export default function AvatarGroup({
   maxLength,
   size,
 }: AvatarGroupProp) {
-  const [displayUsers, setDisplayUsers] = useState(users);
-  const [overLimit, setOverLimit] = useState(0);
+  const [overLimit, setOverLimit] = useState(users.length - maxLength);
 
-  const getInitials = (name: string) => {
-    const initial = name
+  const OverLimit = ({ count }: { count: number }) => {
+    return count > 0 ? (
+      <div className="avatarImage">
+        <div className="overlimitCount">+{count}</div>
+      </div>
+    ) : null;
+  };
+
+  const getInitial = (name: string) => {
+    return name
       .split(' ')
-      .map((n) => n[0])
+      .map((n) => n[0].toUpperCase())
       .join('')
       .substring(0, 2);
-    return initial;
   };
 
   useEffect(() => {
-    if (displayUsers.length > maxLength) {
-      setOverLimit(displayUsers.length - maxLength);
-      const newDisplay = displayUsers.slice(0, maxLength);
-      console.log(displayUsers, newDisplay);
-      setDisplayUsers(newDisplay);
+    if (users.length > maxLength) {
+      // set over limit number for +{number}
+      setOverLimit(users.length - maxLength);
     }
-  }, []);
+  }, [users, maxLength]);
 
   return (
-    <div className={'avatarContainer ' + size}>
-      {displayUsers.map((user: UserProp, idx: number) => (
+    <div data-testid="avatar-container" className={'avatarContainer ' + size}>
+      {users.slice(0, maxLength).map((user: UserProp, idx: number) => (
         <div className="avatarImage" key={idx}>
           {user.image ? (
             <img src={user.image} alt={user.name} />
           ) : (
-            <div className="avatarText">{getInitials(user.name)}</div>
+            <div className="avatarText">{getInitial(user.name)}</div>
           )}
         </div>
       ))}
-      {overLimit && (
-        <div className="avatarImage">
-          <div className="avatarText">+{overLimit}</div>
-        </div>
-      )}
+      <OverLimit count={overLimit} />
     </div>
   );
 }

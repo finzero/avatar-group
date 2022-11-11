@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Jimmy Hendrix",
+    "image": ""
+  },
+  {
+    "name": "Thomas Alfa Edison",
+    "image": "./cat-6.jpg"
+  },
+  {
+    "name": "John Wick",
+    "image": "./cat-4.jpg"
+  },
+  {
+    "name": "Mariah Carey",
+    "image": "./cat-2.jpeg"
+  },
+  {
+    "name": "Jonny Cage",
+    "image": "./cat-5.jpg"
+  },
+  {
+    "name": "Lian Hemsworth",
+    "image": "./cat-7.jpg"
+  }
+]

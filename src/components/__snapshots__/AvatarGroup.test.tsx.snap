@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AvatarGroup should render correctly 1`] = `
+<div
+  className="avatarContainer sm"
+  data-testid="avatar-container"
+>
+  <div
+    className="avatarImage"
+  >
+    <div
+      className="avatarText"
+    >
+      GT
+    </div>
+  </div>
+  <div
+    className="avatarImage"
+  >
+    <img
+      alt="edison alexander thomas"
+      src="./cat-6.jpg"
+    />
+  </div>
+  <div
+    className="avatarImage"
+  >
+    <div
+      className="overlimitCount"
+    >
+      +
+      2
+    </div>
+  </div>
+</div>
+`;
