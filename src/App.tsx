@@ -6,9 +6,9 @@ import ToDo from './ToDo';
 import images from './assets/data.json';
 
 function App() {
-  const [userData, setUserData] = useState<UserProp[]>(images);
-  const [maxLength, setMaxLength] = useState<number>(3);
-  const [size, setSize] = useState<Size>('md');
+  const [userData] = useState<UserProp[]>(images);
+  const [maxLength] = useState<number>(3);
+  const [size] = useState<Size>('md');
 
   return (
     <div>
