@@ -1,0 +1,22 @@
+.formInput{
+  border-radius: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #858585;
+  height: 30px;
+
+  &:focus{
+    border: 1px solid #858585;
+  }
+}
+
+.dFlex{
+  display: flex;
+}
+
+.itemCenter{
+  align-items: center;
+}
+
+.ml1{
+  margin-left: .5rem;
+}

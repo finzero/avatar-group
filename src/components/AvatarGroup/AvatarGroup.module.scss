@@ -1,24 +1,25 @@
 $xsSize: 50px;
 $smSize: 100px;
 $mdSize: 150px;
-$lgSize: 200px; 
+$lgSize: 200px;
 
-.avatarContainer{
+.avatarContainer {
   display: flex;
 }
 
-.avatarImage{
+.avatarImage {
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid white;
   background: #fff;
 }
 
-.avatarImage img{
+.avatarImage img {
   height: inherit;
 }
 
-.avatarText, .overlimitCount{
+.avatarText,
+.overlimitCount {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -28,54 +29,58 @@ $lgSize: 200px;
 }
 
 /*sizing*/
-.xs{
+.xs {
   .avatarImage {
     width: $xsSize;
     height: $xsSize;
   }
-  .avatarImage:not(:first-child){
+  .avatarImage:not(:first-child) {
     margin-left: calc($xsSize / 3 * -1);
   }
-  .avatarText, .overlimitCount{
+  .avatarText,
+  .overlimitCount {
     font-size: 25px;
   }
 }
 
-.sm{
+.sm {
   .avatarImage {
     width: $smSize;
     height: $smSize;
   }
-  .avatarImage:not(:first-child){
+  .avatarImage:not(:first-child) {
     margin-left: calc($smSize / 3 * -1);
   }
-  .avatarText, .overlimitCount{
+  .avatarText,
+  .overlimitCount {
     font-size: 40px;
   }
 }
 
-.md{
+.md {
   .avatarImage {
     width: $mdSize;
     height: $mdSize;
   }
-  .avatarImage:not(:first-child){
+  .avatarImage:not(:first-child) {
     margin-left: calc($mdSize / 3 * -1);
   }
-  .avatarText, .overlimitCount{
+  .avatarText,
+  .overlimitCount {
     font-size: 50px;
   }
 }
 
-.lg{
+.lg {
   .avatarImage {
     width: $lgSize;
     height: $lgSize;
   }
-  .avatarImage:not(:first-child){
+  .avatarImage:not(:first-child) {
     margin-left: calc($lgSize / 3 * -1);
   }
-  .avatarText, .overlimitCount{
+  .avatarText,
+  .overlimitCount {
     font-size: 60px;
   }
 }
