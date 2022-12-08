@@ -34,7 +34,7 @@ export default function GroupRadioButton({
           <label
             htmlFor={`radio${v.value}`}
             className={`${style.labelRadio} ${
-              v.value === selectedValue ? style.active : ''
+              v.value === selectedValue ? style.selected : ''
             }`}
           >
             {v.label}
